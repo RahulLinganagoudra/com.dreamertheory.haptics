@@ -8,7 +8,13 @@
       "name": "Shivanagouda L",
       "email": "slinganagoudra@gmail.com"
     },
+ "keywords": [
+    "ios",
+    "android",
+    "haptic"
+  ],
     "license": "MIT",
     "dependencies": {
-    }    
+    "com.unity.modules.androidjni": "1.0.0"
+  }   
   }
