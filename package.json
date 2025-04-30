@@ -1,20 +1,20 @@
 {
-    "name": "com.dreamertheory.haptics",
-    "version": "1.0.0",
-    "displayName": "Dreamer's Haptics System",
-    "description": "This is an easy package to use haptics in game.",
-    "unity": "2021.3",
-    "author": {
-      "name": "Shivanagouda L",
-      "email": "slinganagoudra@gmail.com"
-    },
- "keywords": [
+  "name": "com.dreamertheory.haptics",
+  "version": "1.0.0",
+  "displayName": "Dreamer's Haptics System",
+  "description": "This is an easy package to use haptics in game.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Shivanagouda L",
+    "email": "slinganagoudra@gmail.com"
+  },
+  "keywords": [
     "ios",
     "android",
     "haptic"
   ],
-    "license": "MIT",
-    "dependencies": {
+  "license": "MIT",
+  "dependencies": {
     "com.unity.modules.androidjni": "1.0.0"
-  }   
   }
+}

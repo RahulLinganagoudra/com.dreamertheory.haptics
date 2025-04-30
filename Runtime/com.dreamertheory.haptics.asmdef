@@ -1,3 +1,17 @@
 {
-	"name": "com.dreamertheory.haptics"
+    "name": "com.dreamertheory.haptics",
+    "rootNamespace": "",
+    "references": [
+        "GUID:554646506760c444e8c83e5eb5416a5e",
+        "GUID:cf71d521a1fdb4048be474c17bc79276"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
