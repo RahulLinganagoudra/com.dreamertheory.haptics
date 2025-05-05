@@ -33,5 +33,14 @@ namespace DT.Haptics
 				Debug.Log("Heavy Haptics");
 			}
 		}
+		public static void PlaySuperHeavyHaptics()
+		{
+			if (CanUseHaptics)
+			{
+				// Play haptics
+				Handheld.Vibrate();
+				Debug.Log("Super Heavy Haptics");
+			}
+		}
 	}
 }
