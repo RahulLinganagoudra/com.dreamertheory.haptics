@@ -4,14 +4,18 @@ namespace DT.Haptics
 {
 	public class Haptics : MonoBehaviour
 	{
-		public static bool CanUseHaptics { get; set; }
+		public static bool CanUseHaptics { get; set; } = true;
 
 		public static void PlayLowHaptics()
 		{
 			if (CanUseHaptics)
 			{
 				// Play haptics
-				HapticFeedback.LightFeedback();
+#if UNITY_IOS && !UNITY_EDITOR
+            iOS.HapticFeedback.PerformHapticFeedback("light");
+#elif UNITY_ANDROID && !UNITY_EDITOR
+            Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.CONTEXT_CLICK);
+#endif
 				Debug.Log("Light Haptics");
 			}
 		}
@@ -20,7 +24,11 @@ namespace DT.Haptics
 			if (CanUseHaptics)
 			{
 				// Play haptics
-				HapticFeedback.MediumFeedback();
+#if UNITY_IOS && !UNITY_EDITOR
+            iOS.HapticFeedback.PerformHapticFeedback("medium");
+#elif UNITY_ANDROID && !UNITY_EDITOR
+            Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.VIRTUAL_KEY);
+#endif
 				Debug.Log("Medium Haptics");
 			}
 		}
@@ -29,7 +37,11 @@ namespace DT.Haptics
 			if (CanUseHaptics)
 			{
 				// Play haptics
-				HapticFeedback.HeavyFeedback();
+#if UNITY_IOS && !UNITY_EDITOR
+            iOS.HapticFeedback.PerformHapticFeedback("heavy");
+#elif UNITY_ANDROID && !UNITY_EDITOR
+            Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.LONG_PRESS);
+#endif
 				Debug.Log("Heavy Haptics");
 			}
 		}
