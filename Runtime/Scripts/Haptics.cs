@@ -16,7 +16,9 @@ namespace DT.Haptics
 #elif UNITY_ANDROID && !UNITY_EDITOR
             Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.CONTEXT_CLICK);
 #endif
+#if UNITY_EDITOR
 				Debug.Log("Light Haptics");
+#endif
 			}
 		}
 		public static void PlayMidHaptics()
@@ -29,7 +31,9 @@ namespace DT.Haptics
 #elif UNITY_ANDROID && !UNITY_EDITOR
             Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.VIRTUAL_KEY);
 #endif
+#if UNITY_EDITOR
 				Debug.Log("Medium Haptics");
+#endif
 			}
 		}
 		public static void PlayHeavyHaptics()
@@ -42,7 +46,9 @@ namespace DT.Haptics
 #elif UNITY_ANDROID && !UNITY_EDITOR
             Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.LONG_PRESS);
 #endif
+#if UNITY_EDITOR
 				Debug.Log("Heavy Haptics");
+#endif
 			}
 		}
 		public static void PlaySuperHeavyHaptics()
@@ -51,7 +57,9 @@ namespace DT.Haptics
 			{
 				// Play haptics
 				Handheld.Vibrate();
+#if UNITY_EDITOR
 				Debug.Log("Super Heavy Haptics");
+#endif
 			}
 		}
 	}
