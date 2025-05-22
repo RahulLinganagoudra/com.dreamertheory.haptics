@@ -1,5 +1,4 @@
 using UnityEngine;
-using CandyCoded.HapticFeedback;
 namespace DT.Haptics
 {
 	public class Haptics : MonoBehaviour
@@ -12,9 +11,9 @@ namespace DT.Haptics
 			{
 				// Play haptics
 #if UNITY_IOS && !UNITY_EDITOR
-            iOS.HapticFeedback.PerformHapticFeedback("light");
+            CandyCoded.HapticFeedback.CandyCoded.HapticFeedback.iOS.HapticFeedback.PerformHapticFeedback("light");
 #elif UNITY_ANDROID && !UNITY_EDITOR
-            Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.CONTEXT_CLICK);
+            CandyCoded.HapticFeedback.Android.HapticFeedback.PerformHapticFeedback(CandyCoded.HapticFeedback.Android.HapticFeedbackConstants.CONTEXT_CLICK);
 #endif
 #if UNITY_EDITOR
 				Debug.Log("Light Haptics");
@@ -27,9 +26,9 @@ namespace DT.Haptics
 			{
 				// Play haptics
 #if UNITY_IOS && !UNITY_EDITOR
-            iOS.HapticFeedback.PerformHapticFeedback("medium");
+            CandyCoded.HapticFeedback.iOS.HapticFeedback.PerformHapticFeedback("medium");
 #elif UNITY_ANDROID && !UNITY_EDITOR
-            Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.VIRTUAL_KEY);
+            CandyCoded.HapticFeedback.Android.HapticFeedback.PerformHapticFeedback(CandyCoded.HapticFeedback.Android.HapticFeedbackConstants.VIRTUAL_KEY);
 #endif
 #if UNITY_EDITOR
 				Debug.Log("Medium Haptics");
@@ -42,9 +41,9 @@ namespace DT.Haptics
 			{
 				// Play haptics
 #if UNITY_IOS && !UNITY_EDITOR
-            iOS.HapticFeedback.PerformHapticFeedback("heavy");
+            CandyCoded.HapticFeedback.iOS.HapticFeedback.PerformHapticFeedback("heavy");
 #elif UNITY_ANDROID && !UNITY_EDITOR
-            Android.HapticFeedback.PerformHapticFeedback(Android.HapticFeedbackConstants.LONG_PRESS);
+            CandyCoded.HapticFeedback.Android.HapticFeedback.PerformHapticFeedback(CandyCoded.HapticFeedback.Android.HapticFeedbackConstants.LONG_PRESS);
 #endif
 #if UNITY_EDITOR
 				Debug.Log("Heavy Haptics");
